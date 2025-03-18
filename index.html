@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新しいことを始める際に陥りがちな5つの心理的罠 | 研究事例と解決策</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #334155;
+        }
+        
+        .document-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            padding: 40px;
+            overflow: hidden;
+        }
+        
+        /* ヘッダースタイル */
+        .header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .header-content {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        .header-title {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #3498db 0%, #74b9ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        
+        .header-subtitle {
+            font-size: 18px;
+            color: #475569;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .header-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            background-color: #e3f2fd;
+            color: #1e88e5;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .header-image-container {
+            width: 300px;
+            height: 200px;
+            background-color: #f1f5f9;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            flex-shrink: 0;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* 導入テキスト */
+        .intro-text-container {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e3f2fd 100%);
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin: 30px 0 40px;
+            border-left: 4px solid #1e88e5;
+        }
+        
+        .intro-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #334155;
+        }
+        
+        .intro-keyword {
+            font-size: 120%;
+            font-weight: 700;
+            color: #1e88e5;
+            background: rgba(224, 242, 254, 0.6);
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 0 2px;
+        }
+        
+        /* セクションスタイル */
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .section-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #1e88e5;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e88e5;
+        }
+        
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        /* 研究カードスタイル */
+        .research-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .research-card {
+            background-color: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .research-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .research-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            color: #1e88e5;
+            flex-shrink: 0;
+        }
+        
+        .research-title {
+            flex: 1;
+        }
+        
+        .research-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 5px;
+        }
+        
+        .research-institution {
+            font-size: 14px;
+            color: #64748b;
+        }
+        
+        .research-content {
+            margin-bottom: 20px;
+        }
+        
+        .research-content h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 10px;
+        }
+        
+        .research-content p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #475569;
+        }
+        
+        .research-source {
+            font-size: 14px;
+            color: #64748b;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .research-source a {
+            color: #1e88e5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .research-source a:hover {
+            text-decoration: underline;
+        }
+        
+        /* トラップ回避テクニック */
+        .technique-container {
+            background-color: #f8fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 15px;
+        }
+        
+        .technique-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e88e5;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .technique-list {
+            list-style: none;
+        }
+        
+        .technique-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .technique-item-icon {
+            color: #1e88e5;
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+        
+        /* 図解スタイル */
+        .diagram {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background-color: #f8fafc;
+        }
+        
+        .diagram-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #334155;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        /* 4象限マトリクス */
+        .matrix-container {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr;
+            gap: 2px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        
+        .matrix-title-y {
+            grid-column: 1;
+            grid-row: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: #64748b;
+            padding: 8px;
+        }
+        
+        .matrix-title-x {
+            grid-column: 2 / span 2;
+            grid-row: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: #64748b;
+            padding: 8px;
+        }
+        
+        .matrix-y-high {
+            grid-column: 1;
+            grid-row: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 12px;
+            color: #64748b;
+            padding: 8px;
+        }
+        
+        .matrix-y-low {
+            grid-column: 1;
+            grid-row: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 12px;
+            color: #64748b;
+            padding: 8px;
+        }
+        
+        .matrix-quadrant {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .matrix-quadrant:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+        
+        .matrix-q1 {
+            grid-column: 2;
+            grid-row: 2;
+            background-color: #bbdefb;
+            border-top-left-radius: 8px;
+        }
+        
+        .matrix-q2 {
+            grid-column: 3;
+            grid-row: 2;
+            background-color: #c8e6c9;
+            border-top-right-radius: 8px;
+        }
+        
+        .matrix-q3 {
+            grid-column: 2;
+            grid-row: 3;
+            background-color: #ffcdd2;
+            border-bottom-left-radius: 8px;
+        }
+        
+        .matrix-q4 {
+            grid-column: 3;
+            grid-row: 3;
+            background-color: #fff9c4;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .matrix-q-title {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #334155;
+        }
+        
+        .matrix-q-desc {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #475569;
+        }
+        
+        /* ステップマップ（縦） */
+        .steps-map {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        
+        .step-item-map {
+            display: flex;
+            width: 100%;
+            min-height: 60px;
+        }
+        
+        .step-item-number {
+            width: 30px;
+            height: 30px;
+            background-color: #1e88e5;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .step-item-content {
+            flex: 1;
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .step-item-content::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 10px solid #f1f5f9;
+        }
+        
+        .step-item-large .step-item-content {
+            background-color: #ffcdd2;
+            border: 1px dashed #ef5350;
+        }
+        
+        .step-item-large .step-item-content::before {
+            border-right-color: #ffcdd2;
+        }
+        
+        .step-item-title {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #334155;
+        }
+        
+        .step-item-desc {
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.3;
+        }
+        
+        /* 意志力の波グラフ */
+        .willpower-waves {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        
+        .willpower-type {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .willpower-label {
+            width: 160px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #334155;
+            text-align: right;
+        }
+        
+        .willpower-chart {
+            flex: 1;
+            height: 60px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .willpower-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .wp-line-alone {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, 
+                #1e88e5 0%, #1e88e5 20%, 
+                #64b5f6 20%, #64b5f6 40%, 
+                #90caf9 40%, #90caf9 60%, 
+                #bbdefb 60%, #bbdefb 80%, 
+                #e3f2fd 80%, #e3f2fd 100%);
+        }
+        
+        .wp-line-environment {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, 
+                #1e88e5 0%, #1e88e5 65%, 
+                #64b5f6 65%, #64b5f6 85%, 
+                #90caf9 85%, #90caf9 95%, 
+                #bbdefb 95%, #bbdefb 100%);
+        }
+        
+        .wp-point {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ef5350;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .wp-point-alone {
+            left: 35%;
+        }
+        
+        .wp-point-environment {
+            left: 80%;
+        }
+        
+        .wp-label-day {
+            position: absolute;
+            bottom: 5px;
+            font-size: 10px;
+            color: #64748b;
+        }
+        
+        .wp-label-morning {
+            left: 5%;
+        }
+        
+        .wp-label-noon {
+            left: 35%;
+        }
+        
+        .wp-label-evening {
+            left: 65%;
+        }
+        
+        .wp-label-night {
+            right: 5%;
+        }
+        
+        .wp-today {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px dashed #90caf9;
+            text-align: center;
+            font-size: 10px;
+            color: #64748b;
+            padding-bottom: 3px;
+        }
+        
+        /* まとめセクション */
+        .summary-container {
+            background-color: #f1f8e9;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 15px;
+            border-left: 4px solid #7cb342;
+        }
+        
+        .summary-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #558b2f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .summary-list {
+            list-style: none;
+        }
+        
+        .summary-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .summary-item-icon {
+            color: #7cb342;
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+        
+        /* 参考文献スタイル */
+        .references {
+            margin-top: 50px;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .references-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .reference-list {
+            list-style: none;
+        }
+        
+        .reference-item {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #475569;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .reference-item:before {
+            content: "?";
+            position: absolute;
+            left: 0;
+            color: #1e88e5;
+            font-weight: bold;
+        }
+        
+        .reference-link {
+            color: #1e88e5;
+            text-decoration: none;
+        }
+        
+        .reference-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* CTA スタイル */
+        .cta-section {
+            display: flex;
+            margin-top: 60px;
+            background: linear-gradient(135deg, #1e88e5 0%, #64b5f6 100%);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .profile-container {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .profile-img-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            position: relative;
+            background-color: #f1f5f9;
+            flex-shrink: 0;
+        }
+        
+        .profile-content {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .profile-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .profile-title {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .profile-desc {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            background-color: white;
+            color: #1e88e5;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 25px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+        
+        .cta-button:hover {
+            background-color: #f8f8f8;
+        }
+        
+        /* レスポンシブデザイン */
+        @media (max-width: 1020px) {
+            .document-container {
+                padding: 0 15px;
+            }
+            
+            .content-section {
+                padding: 30px;
+            }
+            
+            .header-main {
+                flex-direction: column;
+            }
+            
+            .header-content {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .header-image-container {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 28px;
+            }
+            
+            .section-heading {
+                font-size: 20px;
+            }
+            
+            .cta-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .cta-button {
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .intro-text {
+                font-size: 15px;
+            }
+            
+            .matrix-container {
+                height: auto;
+                grid-template-columns: 80px 1fr 1fr;
+            }
+            
+            .matrix-quadrant {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document-container">
+        <div class="content-section">
+            <header class="header">
+                <div class="header-main">
+                    <div class="header-content">
+                        <h1 class="header-title">新しいことを始める際に陥りがちな5つの心理的罠</h1>
+                        <p class="header-subtitle">海外の最新研究から明らかになった「挑戦を妨げる心のワナ」とその対処法</p>
+                        <div class="header-tags">
+                            <span class="tag">#行動心理学</span>
+                            <span class="tag">#習慣形成</span>
+                            <span class="tag">#目標達成</span>
+                        </div>
+                    </div>
+                    <div class="header-image-container">
+                        <img src="task.jpg" alt="心理的罠のイラスト" class="header-image">
+                    </div>
+                </div>
+            </header>
+            
+            <!-- 導入テキスト -->
+            <div class="intro-text-container">
+                <p class="intro-text">
+                    「今年こそは」「今月から絶対に」と決意しても、なぜか続かない…。そんな経験はありませんか？実は、新しいことを始める際には、科学的に実証された<span class="intro-keyword">心理的な罠</span>がいくつも存在します。これらの罠を理解せずに挑戦を繰り返すことは、まるで<span class="intro-keyword">同じ場所に仕掛けられた罠に何度も引っかかる</span>ようなもの。世界中の研究から明らかになった5つの心理的罠とその<span class="intro-keyword">効果的な回避方法</span>を知れば、あなたの次の挑戦は大きく変わるでしょう。
+                </p>
+            </div>
+            
+            <section class="section">
+                <div class="section-title">
+                    <div class="section-number">1</div>
+                    <h2 class="section-heading">5つの心理的罠から学ぶ、失敗のメカニズム</h2>
+                </div>
+                
+                <div class="research-cards">
+                    <!-- フレッシュスタート効果の罠 -->
+                    <div class="research-card">
+                        <div class="research-header">
+                            <div class="research-icon">???</div>
+                            <div class="research-title">
+                                <h3 class="research-name">「フレッシュスタート効果」の罠</h3>
+                                <div class="research-institution">ペンシルバニア大学ウォートンスクールの研究</div>
+                            </div>
+                        </div>
+                        
+                        <div class="research-content">
+                            <h4>内容概要</h4>
+                            <p>
+                                人は新年や新学期、誕生日などの<span class="highlight">節目に新しい目標を設定しやすい</span>（フレッシュスタート効果）が、その反面、節目にこだわりすぎると「<span class="highlight">次の節目まで行動を先送り</span>」するという罠に陥りやすいことが分かっています。
+                            </p>
+                            
+                            <h4>研究結果</h4>
+                            <p>
+                                節目を強調しすぎると、小さな失敗でも「また次の節目でやり直そう」という先送り行動を引き起こす可能性が指摘されています。
+                            </p>
+                            
+                            <div class="diagram">
+                                <h5 class="diagram-title">フレッシュスタート効果と先送り行動の関係</h5>
+                                <div class="matrix-container">
+                                    <div class="matrix-title-y">意欲の高さ</div>
+                                    <div class="matrix-title-x">時間の経過</div>
+                                    <div class="matrix-y-high">高い</div>
+                                    <div class="matrix-y-low">低い</div>
+                                    
+                                    <div class="matrix-quadrant matrix-q1">
+                                        <div class="matrix-q-title">節目での意欲上昇</div>
+                                        <div class="matrix-q-desc">新年や誕生日など時間的節目で動機づけが高まる</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q2">
+                                        <div class="matrix-q-title">実行段階での意欲維持</div>
+                                        <div class="matrix-q-desc">節目後の行動を習慣化できれば持続的成功</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q3">
+                                        <div class="matrix-q-title">失敗後の先送り</div>
+                                        <div class="matrix-q-desc">失敗すると「次の節目まで待とう」と先送り</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q4">
+                                        <div class="matrix-q-title">次の節目への期待</div>
+                                        <div class="matrix-q-desc">次の節目（新年など）に向けて期待が高まる</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="technique-container">
+                                <h4 class="technique-title">??? 心理的罠を回避するテクニック</h4>
+                                <ul class="technique-list">
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>「毎週月曜日」など、頻繁に訪れる小さな節目を活用する</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>失敗後も「今日から再スタート」と即座に行動を再開する習慣をつける</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>カレンダーに「再起動日」を複数設定しておく</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="research-source">
+                            出典: Dai, Milkman, &amp; Riis (2014). 『The Fresh Start Effect: Temporal Landmarks Motivate Aspirational Behavior』
+                            <a href="https://journals.sagepub.com/doi/full/10.1177/0956797613502364" target="_blank">論文リンク</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 意志力の過信による挫折 -->
+                    <div class="research-card">
+                        <div class="research-header">
+                            <div class="research-icon">??</div>
+                            <div class="research-title">
+                                <h3 class="research-name">意志力（Willpower）の過信による挫折</h3>
+                                <div class="research-institution">スタンフォード大学の研究</div>
+                            </div>
+                        </div>
+                        
+                        <div class="research-content">
+                            <h4>内容概要</h4>
+                            <p>
+                                スタンフォード大学の心理学者ケリー・マクゴニガル博士による研究では、<span class="highlight">意志力は有限で消耗する性質</span>があり、強い意志力だけに頼って行動変化を起こそうとすると、挫折しやすいことが指摘されています。
+                            </p>
+                            
+                            <h4>研究結果</h4>
+                            <p>
+                                習慣化や行動変化を成功させるには、意志力に頼るのではなく、<span class="highlight">小さなステップを習慣化</span>したり、環境を整えることが重要とされています。
+                            </p>
+                            
+                            <div class="diagram">
+                                <h5 class="diagram-title">意志力だけに頼る場合と環境設計を活用する場合の比較</h5>
+                                <div class="willpower-waves">
+                                    <div class="willpower-type">
+                                        <div class="willpower-label">意志力のみに頼る</div>
+                                        <div class="willpower-chart">
+                                            <div class="willpower-line">
+                                                <div class="wp-line-alone"></div>
+                                                <div class="wp-point wp-point-alone"></div>
+                                            </div>
+                                            <div class="wp-label-day wp-label-morning">朝</div>
+                                            <div class="wp-label-day wp-label-noon">昼</div>
+                                            <div class="wp-label-day wp-label-evening">夕方</div>
+                                            <div class="wp-label-day wp-label-night">夜</div>
+                                            <div class="wp-today">←意志力が尽きる時点→</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="willpower-type">
+                                        <div class="willpower-label">環境設計も活用</div>
+                                        <div class="willpower-chart">
+                                            <div class="willpower-line">
+                                                <div class="wp-line-environment"></div>
+                                                <div class="wp-point wp-point-environment"></div>
+                                            </div>
+                                            <div class="wp-label-day wp-label-morning">朝</div>
+                                            <div class="wp-label-day wp-label-noon">昼</div>
+                                            <div class="wp-label-day wp-label-evening">夕方</div>
+                                            <div class="wp-label-day wp-label-night">夜</div>
+                                            <div class="wp-today">←意志力が持続する→</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="technique-container">
+                                <h4 class="technique-title">??? 心理的罠を回避するテクニック</h4>
+                                <ul class="technique-list">
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>環境設計で誘惑を減らす（スマホを別室に置くなど）</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>「もし?なら、こうする」という具体的な条件反射計画を立てる</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>重要な決断や活動は意志力が高い朝の時間帯に行う</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="research-source">
+                            出典: Kelly McGonigal (2012).『The Willpower Instinct』
+                            <a href="https://kellymcgonigal.com/willpowerinstinct/" target="_blank">書籍リンク</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 失敗を恐れすぎる心理的罠 -->
+                    <div class="research-card">
+                        <div class="research-header">
+                            <div class="research-icon">??</div>
+                            <div class="research-title">
+                                <h3 class="research-name">「失敗」を恐れすぎる心理的罠</h3>
+                                <div class="research-institution">ハーバード・ビジネス・スクールの研究</div>
+                            </div>
+                        </div>
+                        
+                        <div class="research-content">
+                            <h4>内容概要</h4>
+                            <p>
+                                ハーバード・ビジネス・スクールの研究によると、<span class="highlight">失敗を過度に恐れること</span>（Fear of Failure）が、新しい挑戦を避ける原因となり、革新や創造性を妨げるという結果が示されています。
+                            </p>
+                            
+                            <h4>研究結果</h4>
+                            <p>
+                                失敗への恐怖はリスク回避を強め、結果的に<span class="highlight">成長の機会を失わせます</span>。失敗を許容する文化がある組織では革新が生まれやすいことが実証されています。
+                            </p>
+                            
+                            <div class="diagram">
+                                <h5 class="diagram-title">失敗への見方による成長・学習サイクルの違い</h5>
+                                <div class="matrix-container">
+                                    <div class="matrix-title-y">失敗への反応</div>
+                                    <div class="matrix-title-x">挑戦への姿勢</div>
+                                    <div class="matrix-y-high">ポジティブ</div>
+                                    <div class="matrix-y-low">ネガティブ</div>
+                                    
+                                    <div class="matrix-quadrant matrix-q1">
+                                        <div class="matrix-q-title">成長思考</div>
+                                        <div class="matrix-q-desc">失敗を学びと捉え、積極的に挑戦し続ける</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q2">
+                                        <div class="matrix-q-title">慎重な前進</div>
+                                        <div class="matrix-q-desc">失敗から学ぶが、より計画的に次の挑戦へ</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q3">
+                                        <div class="matrix-q-title">麻痺状態</div>
+                                        <div class="matrix-q-desc">失敗を恐れて行動できない、挑戦を回避</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q4">
+                                        <div class="matrix-q-title">自己否定</div>
+                                        <div class="matrix-q-desc">失敗を自己価値と結びつけ、挑戦意欲が低下</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="technique-container">
+                                <h4 class="technique-title">??? 心理的罠を回避するテクニック</h4>
+                                <ul class="technique-list">
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>「失敗」を「学習機会」と捉え直す言葉の枠組みを使う</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>小さな失敗を意図的に経験し、失敗への耐性を高める</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>失敗から学んだことを記録する「失敗学習日記」をつける</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="research-source">
+                            出典: Amy Edmondson (2011).『Strategies for Learning from Failure』
+                            <a href="https://hbr.org/2011/04/strategies-for-learning-from-failure" target="_blank">論文リンク</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 完璧主義が挫折を招く -->
+                    <div class="research-card">
+                        <div class="research-header">
+                            <div class="research-icon">??</div>
+                            <div class="research-title">
+                                <h3 class="research-name">完璧主義（Perfectionism）が挫折を招く</h3>
+                                <div class="research-institution">英国心理学会の研究</div>
+                            </div>
+                        </div>
+                        
+                        <div class="research-content">
+                            <h4>内容概要</h4>
+                            <p>
+                                英国心理学会（British Psychological Society）の研究によると、<span class="highlight">完璧主義は、新しい習慣を身につける際の継続を妨げ</span>、挫折を引き起こすことが示されています。
+                            </p>
+                            
+                            <h4>研究結果</h4>
+                            <p>
+                                完璧主義者ほど、初期段階の<span class="highlight">些細なミスに敏感</span>であり、それが動機の低下や自己批判につながり、最終的に目標達成を困難にします。
+                            </p>
+                            
+                            <div class="diagram">
+                                <h5 class="diagram-title">完璧主義の罠と「十分に良い」アプローチの差</h5>
+                                <div class="matrix-container">
+                                    <div class="matrix-title-y">達成基準</div>
+                                    <div class="matrix-title-x">継続可能性</div>
+                                    <div class="matrix-y-high">高い</div>
+                                    <div class="matrix-y-low">現実的</div>
+                                    
+                                    <div class="matrix-quadrant matrix-q1">
+                                        <div class="matrix-q-title">理想を追求</div>
+                                        <div class="matrix-q-desc">高すぎる基準を設定し、達成できずに挫折</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q2">
+                                        <div class="matrix-q-title">持続可能な高水準</div>
+                                        <div class="matrix-q-desc">適切な高水準を定め、長期的に継続できる</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q3">
+                                        <div class="matrix-q-title">諦め</div>
+                                        <div class="matrix-q-desc">達成困難と感じて始める前に諦めてしまう</div>
+                                    </div>
+                                    
+                                    <div class="matrix-quadrant matrix-q4">
+                                        <div class="matrix-q-title">「十分に良い」基準</div>
+                                        <div class="matrix-q-desc">80%達成を成功と定義し、着実に進歩する</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="technique-container">
+                                <h4 class="technique-title">??? 心理的罠を回避するテクニック</h4>
+                                <ul class="technique-list">
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>「完璧」ではなく「十分に良い」基準を明確に設定する</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>「すべて」ではなく「80%達成」を成功と定義する</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>自分に対して使う言葉を、友人に対して使うような優しいものに変える</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="research-source">
+                            出典: Andrew P. Hill (2018).『Perfectionism and burnout』
+                            <a href="https://www.bps.org.uk/psychologist/perfectionism-and-burnout" target="_blank">論文リンク</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 非現実的な目標設定による挫折 -->
+                    <div class="research-card">
+                        <div class="research-header">
+                            <div class="research-icon">??</div>
+                            <div class="research-title">
+                                <h3 class="research-name">非現実的な目標設定による挫折</h3>
+                                <div class="research-institution">アメリカ心理学会の調査</div>
+                            </div>
+                        </div>
+                        
+                        <div class="research-content">
+                            <h4>内容概要</h4>
+                            <p>
+                                アメリカ心理学会（APA）の調査によれば、新しいことを始める際に<span class="highlight">多くの人が非現実的な目標を設定</span>し、すぐに結果を期待しすぎる傾向があることが明らかになっています。
+                            </p>
+                            
+                            <h4>研究結果</h4>
+                            <p>
+                                高すぎる目標設定は挫折率を高め、<span class="highlight">小さな達成感を味わえる段階的な目標設定</span>の方が長期的な成功をもたらすことが推奨されています。
+                            </p>
+                            
+                            <div class="diagram">
+                                <h5 class="diagram-title">段階的目標設定 vs 非現実的目標設定</h5>
+                                <div class="steps-map">
+                                    <div class="step-item-map">
+                                        <div class="step-item-number">1</div>
+                                        <div class="step-item-content">
+                                            <div class="step-item-title">現実的なミニステップを設定</div>
+                                            <div class="step-item-desc">例：「週に2回、10分のウォーキング」から始める</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item-map">
+                                        <div class="step-item-number">2</div>
+                                        <div class="step-item-content">
+                                            <div class="step-item-title">小さな成功体験を積み重ねる</div>
+                                            <div class="step-item-desc">例：「10分→15分→20分」と少しずつ延長する</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item-map">
+                                        <div class="step-item-number">3</div>
+                                        <div class="step-item-content">
+                                            <div class="step-item-title">習慣が定着してから負荷を上げる</div>
+                                            <div class="step-item-desc">例：「ウォーキング→軽いジョギング」へ進化</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-item-map step-item-large">
+                                        <div class="step-item-number">X</div>
+                                        <div class="step-item-content">
+                                            <div class="step-item-title">非現実的な高い目標設定</div>
+                                            <div class="step-item-desc">例：「いきなりフルマラソンを完走する」と目標設定して挫折</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="technique-container">
+                                <h4 class="technique-title">??? 心理的罠を回避するテクニック</h4>
+                                <ul class="technique-list">
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>「最小実行単位」を設定し、小さなステップで始める</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>目標を時間軸で細分化し、週単位・月単位の小目標を作る</span>
+                                    </li>
+                                    <li class="technique-item">
+                                        <span class="technique-item-icon">?</span>
+                                        <span>「習慣化」を最初の目標にし、結果は二の次に考える</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="research-source">
+                            出典: American Psychological Association (2020).『Making lifestyle changes that last』
+                            <a href="https://www.apa.org/topics/behavioral-health/healthy-lifestyle-changes" target="_blank">論文リンク</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="section-title">
+                    <div class="section-number">2</div>
+                    <h2 class="section-heading">成功への実践ポイント：心理的罠を回避する方法</h2>
+                </div>
+                
+                <div class="summary-container">
+                    <h3 class="summary-title">?? まとめ：5つの心理的罠を避ける実践ポイント</h3>
+                    <ul class="summary-list">
+                        <li class="summary-item">
+                            <span class="summary-item-icon">?</span>
+                            <span><strong>節目依存からの脱却：</strong>「毎週月曜日」など小さな節目を活用し、失敗後は即座に再スタートする習慣をつけましょう。</span>
+                        </li>
+                        <li class="summary-item">
+                            <span class="summary-item-icon">?</span>
+                            <span><strong>意志力への過信を避ける：</strong>環境設計や「もし?なら、こうする」計画を立て、意志力に頼らないシステムを作りましょう。</span>
+                        </li>
+                        <li class="summary-item">
+                            <span class="summary-item-icon">?</span>
+                            <span><strong>失敗恐怖から学習姿勢へ：</strong>「失敗」を「学習機会」と捉え直し、小さな失敗を意図的に経験して耐性を高めましょう。</span>
+                        </li>
+                        <li class="summary-item">
+                            <span class="summary-item-icon">?</span>
+                            <span><strong>完璧主義から「十分に良い」基準へ：</strong>「80%達成」を成功と定義し、自分に対して友人のように優しい言葉を使いましょう。</span>
+                        </li>
+                        <li class="summary-item">
+                            <span class="summary-item-icon">?</span>
+                            <span><strong>非現実的目標から段階的目標へ：</strong>「最小実行単位」を設定し、習慣化を最初の目標にして、小さなステップで進みましょう。</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="references">
+                    <h3 class="references-title">?? 追加推奨文献（さらに深く学びたい方へ）</h3>
+                    <ul class="reference-list">
+                        <li class="reference-item">
+                            『失敗の科学 失敗から学習する組織、学習できない組織』マシュー・サイド著 
+                            <a href="https://www.amazon.co.jp/dp/4799320232" class="reference-link" target="_blank">Amazonリンク</a>
+                        </li>
+                        <li class="reference-item">
+                            『スタンフォードの自分を変える教室』ケリー・マクゴニガル著 
+                            <a href="https://www.amazon.co.jp/dp/4479793632" class="reference-link" target="_blank">Amazonリンク</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <div class="cta-section">
+                <div class="profile-container">
+                    <div class="profile-img-container">
+                        <img src="profile.jpg" alt="プロフィール画像" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-name">キヨ @949relife</div>
+                        <div class="profile-title">上場建設企業人事顧問×大学准教授×キャリアコーチの複業家/キャリア研究家</div>
+                        <div class="profile-desc">
+                            毎週最新の心理学研究や行動科学の知見を元に、ビジネスパーソンの成長を支援するコンテンツを配信しています。
+                            転職・複業スタート、メンタルダウン・バーンアウトからのキャリアの立て直し方など、無料相談も実施中。
+                        </div>
+                    </div>
+                </div>
+                <a href="https://x.com/949Relife" class="cta-button" target="_blank">無料相談予約</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
